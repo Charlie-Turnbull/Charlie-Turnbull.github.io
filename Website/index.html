@@ -6,238 +6,241 @@
   <title>Charlie Turnbull | Game Design Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <!-- Sticky Top Bar -->
-  <header class="topbar" id="topbar">
-    <div class="topbar__left">
-      <a class="logo" href="#home" aria-label="Go to Home">
-        <img src="assets/logo.jpg" alt="Logo" />
-      </a>
-    </div>
+  <header class="topbar">
+    <a class="logo" href="#home" aria-label="Go to home">
+      <img src="assets/logo.jpg" alt="Logo" />
+    </a>
 
-    <nav class="topbar__nav" aria-label="Primary">
+    <nav class="topbar__nav" aria-label="Main navigation">
       <a class="navlink" href="#home" data-section="home">Home</a>
-      <span class="navsep">-</span>
+      <span>-</span>
       <a class="navlink" href="#portfolio" data-section="portfolio">Portfolio</a>
-      <span class="navsep">-</span>
+      <span>-</span>
       <a class="navlink" href="#about" data-section="about">About Me</a>
-      <span class="navsep">-</span>
+      <span>-</span>
       <a class="navlink" href="#contact" data-section="contact">Contact</a>
     </nav>
 
-    <!-- Top-right contact icons (hide when Contact section is visible) -->
-    <div class="topbar__right" id="topbarRight">
-      <a class="iconbtn" href="https://www.linkedin.com/in/charlie-turnbull-996a253aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+    <div class="topbar__icons" id="topbarIcons">
+      <a href="https://www.linkedin.com/in/charlie-turnbull-996a253aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
         <img src="assets/icons/linkedin.svg" alt="" />
       </a>
-      <a class="iconbtn" href="https://qlxiy.itch.io" target="_blank" rel="noreferrer" aria-label="Itch.io">
+
+      <a href="https://qlxiy.itch.io" target="_blank" rel="noreferrer" aria-label="Itch.io">
         <img src="assets/icons/itch.svg" alt="" />
       </a>
-      <a class="iconbtn" href="https://x.com/YOURHANDLE" target="_blank" rel="noreferrer" aria-label="X / Twitter">
+
+      <a href="https://x.com/CharlieTDesign" target="_blank" rel="noreferrer" aria-label="X / Twitter">
         <img src="assets/icons/x.svg" alt="" />
       </a>
     </div>
   </header>
 
-  <!-- HOME -->
   <main>
+
+    <!-- HOME -->
     <section class="section section--home" id="home">
-      <div class="home__grid">
-        <div class="home__left">
-          <h1 class="home__title">Charlie Turnbull</h1>
-          <p class="home__sub">
-            <!-- EDIT ME -->
+      <div class="homeGrid">
+
+        <div class="homeText homeText--left">
+          <h1>Charlie Turnbull</h1>
+          <p>
             Game designer specialising in systems design, AI design and model texturing.
           </p>
         </div>
 
-        <div class="home__center">
-          <div class="headshotFrame">
-            <img src="assets/headshot.jpg" alt="Headshot" />
-          </div>
+        <div class="headshotFrame">
+          <img src="assets/headshot.jpg" alt="Headshot" />
         </div>
 
-        <div class="home__right">
-          <h2 class="home__tag">&lt;designer&gt;</h2>
-          <p class="home__sub">
-            <!-- EDIT ME -->
+        <div class="homeText homeText--right">
+          <h2>&lt;designer&gt;</h2>
+          <p>
             Systems and AI Designer in Unity/Unreal and iterates through playtesting.
           </p>
         </div>
+
       </div>
 
-      <div class="home__scrollHint">
-        <p>SOME OF MY LATEST WORK</p>
-      </div>
+      <a class="scrollHint" href="#portfolio" aria-label="Scroll to portfolio">
+        <span>SOME OF MY LATEST WORK</span>
+        <span class="scrollArrow">↓</span>
+      </a>
     </section>
 
     <!-- PORTFOLIO -->
     <section class="section section--portfolio" id="portfolio">
-      <div class="section__header">
-        <h2>Portfolio</h2>
-      </div>
+      <div class="contentWrap">
+        <h2 class="sectionTitle">Portfolio</h2>
 
-      <!-- Horizontal scroll row -->
-      <div class="carousel" aria-label="Portfolio project carousel">
-        <div class="carousel__track">
+        <div class="carousel" aria-label="Portfolio project carousel">
+          <div class="carouselTrack">
 
-          <!-- Project Card 1 -->
-          <article class="projectCard">
-            <img class="projectCard__img" src="assets/projects/project1.jpg" alt="Project 1 thumbnail" />
-            <div class="projectCard__overlay">
-              <h3 class="projectCard__title">Game Name: Kyomen</h3>
-              <p class="projectCard__text">
-                <!-- EDIT ME -->
-                Bullet hell
-              </p>
-              <p class="projectCard__text">
-                <!-- EDIT ME -->
-                Contributions: Level design, system design, model texturing and VFX.
-              </p>
-              <div class="projectCard__links">
-                <a class="btn" href="https://ath3rox.itch.io/kyomen" target="_blank" rel="noreferrer">Play / Page</a>
+            <article class="projectCard">
+              <div class="projectImage">
+                <img src="assets/projects/project1.jpg" alt="Project 1 thumbnail" />
               </div>
-            </div>
-          </article>
 
-          <!-- Duplicate this block for more projects -->
-          <article class="projectCard">
-            <img class="projectCard__img" src="assets/projects/project2.jpg" alt="Project 2 thumbnail" />
-            <div class="projectCard__overlay">
-              <h3 class="projectCard__title">Game Name: Just a Chill Fishing Game</h3>
-              <p class="projectCard__text">
-                Just a Chill Fishing Game. That's it.</p>
-              <p class="projectCard__text">Contributions: Game Design, Art</p>
-              <div class="projectCard__links">
-                <a class="btn" href="https://allanowo.itch.io/just-a-chill-fishing-game" target="_blank" rel="noreferrer">Play / Page</a>
+              <div class="projectInfo">
+                <h3>Game Name: Kyomen</h3>
+                <p>Bullet hell</p>
+                <p>
+                  <strong>Contributions:</strong> Level design, system design, model texturing and VFX.
+                </p>
+                <a class="button" href="https://ath3rox.itch.io/kyomen" target="_blank" rel="noreferrer">Play / Page</a>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Duplicate this block for more projects -->
-          <article class="projectCard">
-            <img class="projectCard__img" src="assets/projects/project3.jpg" alt="Project 3 thumbnail" />
-            <div class="projectCard__overlay">
-              <h3 class="projectCard__title">Game Name: Sneaky Saving</h3>
-              <p class="projectCard__text">
-                Stealth/avoidance puzzle game focused on energy-saving tasks.</p>
-              <p class="projectCard__text">Contributions: Game Design</p>
-              <div class="projectCard__links">
-                <a class="btn" href="https://gcugames.itch.io/sneaky-saving" target="_blank" rel="noreferrer">Play / Page</a>
+            <article class="projectCard">
+              <div class="projectImage">
+                <img src="assets/projects/project2.jpg" alt="Project 2 thumbnail" />
               </div>
-            </div>
-          </article>
 
-          <!-- Duplicate this block for more projects -->
-          <article class="projectCard">
-            <img class="projectCard__img" src="assets/projects/project4.jpg" alt="Project 4 thumbnail" />
-            <div class="projectCard__overlay">
-              <h3 class="projectCard__title">Game Name: Tower of Tales</h3>
-              <p class="projectCard__text">
-                Bullet hell, boss arena</p>
-              <p class="projectCard__text">Contributions: Game Design</p>
-              <div class="projectCard__links">
-                <a class="btn" href="https://qlxiy.itch.io/tower-of-tales" target="_blank" rel="noreferrer">Play / Page</a>
+              <div class="projectInfo">
+                <h3>Game Name: Just a Chill Fishing Game</h3>
+                <p>Just a Chill Fishing Game. That's it.</p>
+                <p>
+                  <strong>Contributions:</strong> Game Design, Art.
+                </p>
+                <a class="button" href="https://allanowo.itch.io/just-a-chill-fishing-game" target="_blank" rel="noreferrer">Play / Page</a>
               </div>
-            </div>
-          </article>
+            </article>
+
+            <article class="projectCard">
+              <div class="projectImage">
+                <img src="assets/projects/project3.jpg" alt="Project 3 thumbnail" />
+              </div>
+
+              <div class="projectInfo">
+                <h3>Game Name: Sneaky Saving</h3>
+                <p>Stealth/avoidance puzzle game focused on energy-saving tasks.</p>
+                <p>
+                  <strong>Contributions:</strong> Game Design.
+                </p>
+                <a class="button" href="https://gcugames.itch.io/sneaky-saving" target="_blank" rel="noreferrer">Play / Page</a>
+              </div>
+            </article>
+
+            <article class="projectCard">
+              <div class="projectImage">
+                <img src="assets/projects/project4.jpg" alt="Project 4 thumbnail" />
+              </div>
+
+              <div class="projectInfo">
+                <h3>Game Name: Tower of Tales</h3>
+                <p>Bullet hell, boss arena.</p>
+                <p>
+                  <strong>Contributions:</strong> Game Design.
+                </p>
+                <a class="button" href="https://qlxiy.itch.io/tower-of-tales" target="_blank" rel="noreferrer">Play / Page</a>
+              </div>
+            </article>
+
+          </div>
         </div>
-      </div>
 
-      <p class="carousel__hint">Tip: scroll sideways (shift + mouse wheel) or trackpad swipe.</p>
+        <p class="carouselHint">Tip: scroll sideways with trackpad, shift + mouse wheel, or drag on some devices.</p>
+      </div>
     </section>
 
-    <!-- ABOUT + EXPERIENCE -->
+    <!-- ABOUT -->
     <section class="section section--about" id="about">
-      <div class="about__grid">
-        <div class="about__left">
-          <div class="pillTitle">About Me</div>
-          <div class="about__text">
-            <!-- EDIT ME -->
+      <div class="aboutGrid">
+
+        <div class="aboutLeft">
+          <h2 class="sectionTitle">About Me</h2>
+
+          <div class="aboutText">
             <p>
               I’m a game design student focused on player experience, UX, and rapid prototyping.
               I enjoy building and iterating systems based on playtest feedback.
             </p>
+
             <p>
               Tools: Unity, Unreal, Figma, Substance Painter. Interests: stealth/puzzle loops, onboarding, GUR.
             </p>
           </div>
         </div>
 
-        <div class="about__right">
-          <div class="pillTitle pillTitle--small">Experience</div>
+        <div class="aboutRight">
+          <h2 class="sectionTitle sectionTitle--small">Experience</h2>
 
           <div class="xpGrid">
-            <!-- Experience box -->
+
             <div class="xpCard">
-              <h4>Qualification</h4>
+              <h3>Qualification</h3>
               <p>Glasgow Caledonian University</p>
               <p>BA / BSc Game Development (Year 4)</p>
             </div>
 
             <div class="xpCard">
-              <h4>Experience</h4>
+              <h3>Experience</h3>
               <p>McDonalds Crew Member</p>
               <p>Making food, serving customers, 2 years</p>
             </div>
 
             <div class="xpCard">
-              <h4>Experience</h4>
+              <h3>Experience</h3>
               <p>Bar - Kitchen Porter</p>
               <p>Interacted with customers, cleaned, 2 months</p>
             </div>
 
             <div class="xpCard">
-              <h4>Experience</h4>
+              <h3>Experience</h3>
               <p>Placement / Freelance</p>
               <p>What you did + timeframe</p>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section section--contact" id="contact">
-      <div class="section__header">
-        <h2>Contact</h2>
-      </div>
+      <h2 class="sectionTitle sectionTitle--center">Contact</h2>
 
       <div class="contactRow">
+
         <div class="contactItem">
           <div class="contactIcon">
             <img src="assets/icons/email.svg" alt="" />
           </div>
-          <p class="contactLabel">Email</p>
-          <p class="contactValue">CharlieTDesign@outlook.com</p>
+          <h3>Email</h3>
+          <p>CharlieTDesign@outlook.com</p>
         </div>
 
-        <a class="contactItem contactItem--link" href="https://www.linkedin.com/in/charlie-turnbull-996a253aa/" target="_blank" rel="noreferrer">
+        <a class="contactItem" href="https://www.linkedin.com/in/charlie-turnbull-996a253aa/" target="_blank" rel="noreferrer">
           <div class="contactIcon">
             <img src="assets/icons/linkedin.svg" alt="" />
           </div>
-          <p class="contactLabel">LinkedIn</p>
-          <p class="contactValue">Charlie Turnbull</p>
+          <h3>LinkedIn</h3>
+          <p>Charlie Turnbull</p>
         </a>
 
-        <a class="contactItem contactItem--link" href="https://qlxiy.itch.io" target="_blank" rel="noreferrer">
+        <a class="contactItem" href="https://qlxiy.itch.io" target="_blank" rel="noreferrer">
           <div class="contactIcon">
             <img src="assets/icons/itch.svg" alt="" />
           </div>
-          <p class="contactLabel">Itch.io</p>
-          <p class="contactValue">https://qlxiy.itch.io/</p>
+          <h3>Itch.io</h3>
+          <p>https://qlxiy.itch.io/</p>
         </a>
 
-        <a class="contactItem contactItem--link" href="https://x.com/YOURHANDLE" target="_blank" rel="noreferrer">
+        <a class="contactItem" href="https://x.com/CharlieTDesign" target="_blank" rel="noreferrer">
           <div class="contactIcon">
             <img src="assets/icons/x.svg" alt="" />
           </div>
-          <p class="contactLabel">X / Twitter</p>
-          <p class="contactValue">@YOURHANDLE</p>
+          <h3>X / Twitter</h3>
+          <p>@CharlieTDesign</p>
         </a>
+
       </div>
     </section>
+
   </main>
 
   <script src="script.js"></script>
