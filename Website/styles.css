@@ -24,10 +24,12 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* TOP BAR */
+/* =========================
+   TOP BAR
+========================= */
 
 .topbar {
   height: var(--topbar-height);
@@ -40,12 +42,6 @@ body {
   padding: 0 30px;
   background: #101010;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-.logo {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
 }
 
 .logo img {
@@ -70,7 +66,7 @@ body {
 .navlink {
   color: var(--text);
   text-decoration: none;
-  transition: color 160ms ease, opacity 160ms ease;
+  transition: color 160ms ease;
 }
 
 .navlink:hover,
@@ -81,7 +77,6 @@ body {
 .topbar__icons {
   justify-self: end;
   display: flex;
-  align-items: center;
   gap: 12px;
   transition: opacity 200ms ease;
 }
@@ -112,7 +107,9 @@ body {
   filter: invert(1);
 }
 
-/* GLOBAL */
+/* =========================
+   GLOBAL
+========================= */
 
 .section {
   min-height: calc(100vh - var(--topbar-height));
@@ -128,10 +125,8 @@ body {
 .sectionTitle {
   display: inline-block;
   margin: 0 0 34px;
-  color: var(--text);
   font-size: 44px;
-  line-height: 1.05;
-  font-weight: 950;
+  font-weight: 900;
   position: relative;
 }
 
@@ -158,56 +153,47 @@ body {
   margin-right: auto;
 }
 
-/* HOME */
+/* =========================
+   HOME
+========================= */
 
 .section--home {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 90px;
+  padding-bottom: 100px;
+  position: relative;
 }
 
 .homeGrid {
-  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 440px 1fr;
-  align-items: center;
   gap: 44px;
+  align-items: center;
 }
 
 .homeText h1,
 .homeText h2 {
-  margin: 0 0 22px;
-  color: var(--text);
+  margin: 0 0 20px;
   font-size: clamp(44px, 4vw, 72px);
-  line-height: 0.95;
-  font-weight: 950;
-  letter-spacing: -2px;
 }
 
 .homeText p {
-  max-width: 390px;
-  margin: 0;
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.55;
+  max-width: 380px;
 }
 
-.homeText--right p {
-  max-width: 420px;
-}
+/* CLEAN IMAGE STYLE (NO HARSH FADE) */
 
 .headshotFrame {
-  position: relative;
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 34px;
   background: var(--panel);
-  box-shadow: 0 0 55px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
 }
 
 .headshotFrame img {
@@ -216,100 +202,71 @@ body {
   object-fit: cover;
 }
 
+/* removed harsh fade completely */
 .headshotFrame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  box-shadow:
-    inset 0 0 80px rgba(18, 18, 18, 0.75),
-    inset 0 -40px 80px rgba(18, 18, 18, 0.35);
+  display: none;
 }
 
 .scrollHint {
   position: absolute;
+  bottom: 30px;
   left: 50%;
-  bottom: 28px;
   transform: translateX(-50%);
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  text-align: center;
   color: var(--muted);
   text-decoration: none;
   font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .scrollArrow {
-  color: var(--accent-hover);
-  font-size: 28px;
-  line-height: 1;
+  display: block;
+  margin-top: 8px;
+  color: var(--accent);
+  font-size: 26px;
   animation: bounce 1.4s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }
 
-/* PORTFOLIO */
+/* =========================
+   PORTFOLIO
+========================= */
 
 .section--portfolio {
   background: var(--bg-soft);
 }
 
 .carousel {
-  width: 100%;
   overflow-x: auto;
-  overflow-y: visible;
-  padding: 10px 0 28px;
+  padding-bottom: 30px;
 }
 
 .carouselTrack {
   display: flex;
-  align-items: stretch;
-  gap: 22px;
-  min-width: max-content;
-}
-
-.carouselHint {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 14px;
+  gap: 20px;
 }
 
 .projectCard {
   display: flex;
   width: 300px;
-  height: 430px;
-  flex: 0 0 auto;
-  overflow: hidden;
-  border-radius: var(--radius);
-  background: transparent;
-  transition: width 280ms ease, transform 280ms ease;
+  height: 420px;
+  transition: 0.3s;
 }
 
 .projectCard:hover {
-  width: 670px;
-  transform: translateY(-5px);
+  width: 650px;
 }
 
 .projectImage {
   width: 300px;
-  height: 430px;
-  flex: 0 0 300px;
+  height: 420px;
   overflow: hidden;
   border-radius: var(--radius);
-  background: var(--panel);
-  box-shadow: 0 0 42px rgba(0, 0, 0, 0.45);
-  position: relative;
+  box-shadow: 0 18px 40px var(--shadow);
 }
 
 .projectImage img {
@@ -318,12 +275,9 @@ body {
   object-fit: cover;
 }
 
+/* removed fade here too */
 .projectImage::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  box-shadow: inset 0 0 45px rgba(18, 18, 18, 0.3);
+  display: none;
 }
 
 .projectInfo {
@@ -331,275 +285,115 @@ body {
   opacity: 0;
   overflow: hidden;
   background: var(--panel);
-  color: var(--text);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  transition: 0.3s;
   border-left: 3px solid var(--accent);
-  transition: width 280ms ease, opacity 220ms ease, padding 280ms ease;
-}
-
-.projectCard:hover .projectImage {
-  border-radius: var(--radius) 0 0 var(--radius);
 }
 
 .projectCard:hover .projectInfo {
-  width: 370px;
+  width: 350px;
   opacity: 1;
-  padding: 42px 34px;
+  padding: 30px;
 }
 
 .projectInfo h3 {
-  margin: 0 0 18px;
-  font-size: 23px;
-  line-height: 1.2;
+  margin: 0 0 10px;
 }
 
 .projectInfo p {
-  margin: 0 0 16px;
   color: var(--muted);
-  line-height: 1.55;
-  font-size: 15px;
-}
-
-.projectInfo strong {
-  color: var(--text);
 }
 
 .button {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 12px 16px;
-  border-radius: 14px;
   background: var(--accent);
   color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: 800;
-  transition: background 160ms ease, transform 160ms ease;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .button:hover {
   background: var(--accent-hover);
-  transform: translateY(-2px);
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .aboutGrid {
-  max-width: 1400px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.aboutText {
-  max-width: 650px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
 }
 
 .aboutText p {
-  margin: 0 0 22px;
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.75;
 }
 
 .xpGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 16px;
 }
 
 .xpCard {
-  min-height: 150px;
-  padding: 24px;
-  border-radius: 20px;
+  padding: 20px;
   background: var(--panel);
-  color: var(--text);
+  border-radius: 18px;
   box-shadow: 0 18px 40px var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
 .xpCard:hover {
-  transform: translateY(-3px);
   background: var(--panel-soft);
-  border-color: rgba(177, 18, 38, 0.45);
 }
 
-.xpCard h3 {
-  margin: 0 0 12px;
-  color: var(--text);
-  font-size: 17px;
-}
-
-.xpCard p {
-  margin: 0 0 6px;
-  color: var(--muted);
-  line-height: 1.45;
-  font-size: 14px;
-}
-
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .section--contact {
-  min-height: calc(100vh - var(--topbar-height));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--bg-soft);
-  text-align: center;
 }
 
 .contactRow {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   gap: 24px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  justify-content: center;
 }
 
 .contactItem {
-  width: 230px;
-  min-height: 190px;
-  padding: 28px 18px;
-  border-radius: 22px;
+  width: 220px;
+  padding: 20px;
   background: var(--panel);
-  color: var(--text);
+  border-radius: 20px;
+  text-align: center;
   text-decoration: none;
-  box-shadow: 0 18px 40px var(--shadow);
-  border-bottom: 4px solid transparent;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  color: var(--text);
+  transition: 0.2s;
 }
 
 .contactItem:hover {
   transform: translateY(-5px);
-  background: var(--panel-soft);
-  border-bottom-color: var(--accent);
+  border-bottom: 3px solid var(--accent);
 }
 
 .contactIcon {
-  width: 68px;
-  height: 68px;
-  margin: 0 auto 16px;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  background: #101010;
+  border-radius: 15px;
   display: grid;
   place-items: center;
-  border-radius: 20px;
-  background: #101010;
 }
 
 .contactIcon img {
-  width: 30px;
-  height: 30px;
+  width: 24px;
   filter: invert(1);
-}
-
-.contactItem h3 {
-  margin: 0 0 8px;
-  color: var(--text);
-  font-size: 18px;
-}
-
-.contactItem p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  word-break: break-word;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1100px) {
-  .homeGrid {
-    grid-template-columns: 1fr;
-    max-width: 640px;
-    text-align: center;
-  }
-
-  .homeText p {
-    margin: 0 auto;
-  }
-
-  .headshotFrame {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .aboutGrid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-}
-
-@media (max-width: 800px) {
-  :root {
-    --topbar-height: 72px;
-  }
-
-  .topbar {
-    grid-template-columns: 70px 1fr;
-    padding: 0 18px;
-  }
-
-  .topbar__nav {
-    justify-self: end;
-    gap: 8px;
-    font-size: 13px;
-  }
-
-  .topbar__icons {
-    display: none;
-  }
-
-  .section {
-    padding: 60px 6vw;
-  }
-
-  .homeText h1,
-  .homeText h2 {
-    font-size: 44px;
-  }
-
-  .sectionTitle {
-    font-size: 38px;
-  }
-
-  .projectCard,
-  .projectCard:hover {
-    width: 86vw;
-    height: auto;
-    flex-direction: column;
-    transform: none;
-  }
-
-  .projectImage {
-    width: 86vw;
-    height: 360px;
-    flex-basis: auto;
-    border-radius: var(--radius) var(--radius) 0 0;
-  }
-
-  .projectCard:hover .projectImage {
-    border-radius: var(--radius) var(--radius) 0 0;
-  }
-
-  .projectInfo,
-  .projectCard:hover .projectInfo {
-    width: 86vw;
-    opacity: 1;
-    padding: 28px;
-    border-left: none;
-    border-top: 3px solid var(--accent);
-    border-radius: 0 0 var(--radius) var(--radius);
-  }
-
-  .xpGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .contactItem {
-    width: 100%;
-    max-width: 320px;
-  }
 }
