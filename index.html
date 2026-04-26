@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlie Turnbull | Game Design Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="#home" aria-label="Go to home">
+      <img src="assets/logo.jpg" alt="Logo" />
+    </a>
+
+    <nav class="topbar__nav" aria-label="Main navigation">
+      <a class="navlink" href="#home" data-section="home">Home</a>
+      <span>-</span>
+      <a class="navlink" href="#portfolio" data-section="portfolio">Portfolio</a>
+      <span>-</span>
+      <a class="navlink" href="#about" data-section="about">About Me</a>
+      <span>-</span>
+      <a class="navlink" href="#contact" data-section="contact">Contact</a>
+    </nav>
+
+    <div class="topbar__icons" id="topbarIcons">
+      <a href="https://www.linkedin.com/in/charlie-turnbull-996a253aa/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <img src="assets/icons/linkedin.svg" alt="" />
+      </a>
+
+      <a href="https://qlxiy.itch.io" target="_blank" rel="noreferrer" aria-label="Itch.io">
+        <img src="assets/icons/itch.svg" alt="" />
+      </a>
+
+      <a href="https://x.com/CharlieTDesign" target="_blank" rel="noreferrer" aria-label="X / Twitter">
+        <img src="assets/icons/x.svg" alt="" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="section section--home" id="home">
+      <div class="homeGrid">
+
+        <div class="homeText homeText--left">
+          <h1>Charlie Turnbull</h1>
+          <p>Systems. AI. Iteration.</p>
+        </div>
+
+        <div class="headshotFrame">
+          <img src="assets/headshot.jpg" alt="Headshot" />
+        </div>
+
+        <div class="homeText homeText--right">
+          <h2>&lt;designer&gt;</h2>
+          <p>Creating clear, reactive systems with a focus on player experience.</p>
+        </div>
+
+      </div>
+
+      <a class="scrollHint" href="#portfolio" aria-label="Scroll to portfolio">
+        <span>SOME OF MY LATEST WORK</span>
+        <span class="scrollArrow">↓</span>
+      </a>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section section--portfolio" id="portfolio">
+      <div class="contentWrap">
+        <h2 class="sectionTitle">Portfolio</h2>
+
+        <div class="portfolioGroup">
+          <h3 class="portfolioSubtitle">Featured Work</h3>
+
+          <div class="carousel" aria-label="Featured portfolio carousel">
+            <div class="carouselTrack">
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project1.jpg" alt="Kyomen thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>Kyomen</h3>
+                  <p>A fast-paced bullet hell with light roguelike elements where players equip two masks from a pool of six, each defining unique abilities and playstyles. Set on a collapsing 5x5 grid, creating constant spatial pressure as tiles fall away and enemies spawn, forcing reactive moments and decision-making.</p>
+                  <p><strong>Contributions:</strong> Collaborative systems and gameplay design, enemy/AI design. Full model texturing, learning and applying Substance Painter to establish a consistent visual identity across the project.</p>
+                  <p><strong>What I Learned:</strong> Developed strong skills in material creation and visual identity, alongside rapid team-based iteration through continuous playtesting.</p>
+                  <a class="button" href="https://ath3rox.itch.io/kyomen" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project3.png" alt="Honours project thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>Honours Project - Adaptive AI NPC Study</h3>
+                  <p>A solo Unreal Engine research prototype created to investigate how scripted and adaptive reinforcement learning-driven NPC behaviours affect player engagement and perceived fairness in a controlled 1v1 scenario.</p>
+                  <p><strong>Contributions:</strong> Solo development, AI behaviour design, gameplay loop design, in-game survey flow, CSV data export, participant testing and data analysis.</p>
+                  <p><strong>What I Learned:</strong> Developed a stronger understanding of controlled playtesting, ethical participant research, adaptive AI design, questionnaire design and how player perception can differ from intended system behaviour.</p>
+                  <a class="button" href="https://qlxiy.itch.io/honours-project-charlie-turnbull" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project6.png" alt="AI movement prototype thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>AI Movement Prototype</h3>
+                  <p>An Unreal Engine prototype exploring AI movement behaviour and readable NPC reactions. The prototype contains three AI characters that share a single AI controller structure, with different behaviour driven through Behaviour Trees: one follows the player, one flees from the player and one attempts to maintain distance by repositioning when interrupted.</p>
+                  <p><strong>Contributions:</strong> Designed and built the prototype independently, including the AI controller setup, Behaviour Tree logic, sensing behaviour, movement responses and simple presentation flow for testing.</p>
+                  <p><strong>What I Learned:</strong> Gained practical experience creating AI behaviour from scratch in Unreal Engine, using Behaviour Trees to organise logic, and understanding how small changes in movement rules can make NPC behaviour feel more reactive and readable.</p>
+                  <a class="button" href="https://qlxiy.itch.io/ai-prototype" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolioGroup">
+          <h3 class="portfolioSubtitle">Projects</h3>
+
+          <div class="carousel" aria-label="Supporting project carousel">
+            <div class="carouselTrack">
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project2.jpg" alt="Just a Chill Fishing Game thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>Just a Chill Fishing Game</h3>
+                  <p>A simple, goal-driven fishing game built around a relaxing, light progression loop. Players are tasked with catching specific fish by casting a hook and guiding it toward targets, while avoiding bubbles that can knock fish away or disrupt the line.</p>
+                  <p><strong>Contributions:</strong> Gameplay and systems design within a team of five during a 48-hour Global Game Jam. Focused on skill tree design and balancing, alongside contributing heavily to making pixel art for the game.</p>
+                  <p><strong>What I Learned:</strong> Learned to work effectively under tight time constraints, contributing to a complete and functional game within 48 hours. Improved collaboration under pressure and gained experience prioritising features to maintain a clear and polished core gameplay loop.</p>
+                  <a class="button" href="https://allanowo.itch.io/just-a-chill-fishing-game" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project4.jpg" alt="Sneaky Saving thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>Sneaky Saving</h3>
+                  <p>An educational stealth/avoidance game created to teach students living in accommodation about energy-saving habits. Players control an energy guardian moving through homes, completing energy-saving tasks while avoiding detection by residents.</p>
+                  <p><strong>Contributions:</strong> Worked across the majority of the design work, including level design, systems, gameplay mechanics, win/loss conditions, sound sourcing and research into energy-saving behaviours. I also supported another designer by helping explain design principles around level structure and player experience.</p>
+                  <p><strong>What I Learned:</strong> Gained a stronger understanding of designing around a client brief, especially when turning a real-world educational topic into playable mechanics. The project also showed how games can communicate practical information through interaction rather than passive instruction.</p>
+                  <a class="button" href="https://gcugames.itch.io/sneaky-saving" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project7.png" alt="Experimental Bike Prototype thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>Experimental Bike Prototype</h3>
+                  <p>A 2D experimental platformer built around physics-driven movement and player-created terrain. The player controls a bike using hinge joint physics, navigating the level by drawing their own paths with a limited ink resource.</p>
+                  <p><strong>Contributions:</strong> Designed and developed the prototype independently, focusing on the core mechanics including physics-based bike movement, hinge joint behaviour and the real-time terrain drawing system.</p>
+                  <p><strong>What I Learned:</strong> Explored how input methods influence gameplay, particularly how drawing tablet interaction can create a more fluid and intuitive experience. Also gained experience working with physics systems and designing mechanics around player-created solutions rather than predefined paths.</p>
+                  <a class="button" href="https://qlxiy.itch.io/scribble-bike" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+              <article class="projectCard">
+                <div class="projectImage">
+                  <img src="assets/projects/project5.jpg" alt="Tower of Tales thumbnail" />
+                </div>
+
+                <div class="projectInfo">
+                  <h3>Tower of Tales</h3>
+                  <p>A bullet hell boss arena game inspired by <i>Arena of the Mad King, The Binding of Isaac</i> and <i>Realm of the Mad God.</i> Players face a single boss encounter, dodging projectile patterns while looking for opportunities to deal damage in a fast-paced arena setting.</p>
+                  <p><strong>Contributions:</strong> Worked on overall design, focusing on boss design, attack patterns, character design and a small amount of narrative.</p>
+                  <p><strong>What I Learned:</strong> This was my first full project, where I developed a foundation in game design principles such as pacing, game feel and readability. It also reinforced the importance of simplicity in design, focusing on making core mechanics work well rather than overcomplicating systems.</p>
+                  <a class="button" href="https://qlxiy.itch.io/tower-of-tales" target="_blank" rel="noreferrer">Play / Page</a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+        <p class="carouselHint">Tip: scroll sideways with trackpad, shift + mouse wheel, or drag on some devices.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--about" id="about">
+      <div class="aboutGrid">
+
+        <div class="aboutLeft">
+          <h2 class="sectionTitle">About Me</h2>
+
+          <div class="aboutText">
+            <p>
+              I am a game design student aiming to specialise in systems and AI-focused design. I enjoy creating mechanics that feel fair, readable and responsive, then improving them through playtesting,
+              feedback and iteration.
+            </p>
+
+            <p>
+              Across solo and team projects, I have worked on gameplay systems, AI behaviour, level design, visual identity and research-led prototypes in Unity and Unreal. I am reliable, communicative
+              and comfortable adapting when plans change or new tools need to be learned.
+            </p>
+          </div>
+
+          <div class="skillsBlock">
+            <h2 class="sectionTitle sectionTitle--small">Skills</h2>
+
+            <div class="skillsGrid">
+              <div class="skillCard">
+                <h3>Technical</h3>
+                <div class="skillTags">
+                  <span>Unity</span>
+                  <span>C#</span>
+                  <span>Unreal Engine</span>
+                  <span>Blueprints</span>
+                  <span>Behaviour Trees</span>
+                  <span>Substance Painter</span>
+                  <span>Aseprite</span>
+                </div>
+              </div>
+
+              <div class="skillCard">
+                <h3>Design</h3>
+                <div class="skillTags">
+                  <span>Systems Design</span>
+                  <span>AI Behaviour Design</span>
+                  <span>Level Design</span>
+                  <span>Player Experience</span>
+                  <span>Playtesting</span>
+                  <span>Balancing</span>
+                  <span>Prototyping</span>
+                  <span>Game User Research</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aboutRight">
+          <h2 class="sectionTitle sectionTitle--small">Experience</h2>
+
+          <div class="xpGrid">
+            <div class="xpCard">
+              <h3>Qualification</h3>
+              <p>Glasgow Caledonian University</p>
+              <p>BA / BSc Game Development (Year 4)</p>
+            </div>
+
+            <div class="xpCard">
+              <h3>Game Development</h3>
+              <p>University & personal projects</p>
+              <p>Systems, AI, level design, research prototypes</p>
+            </div>
+
+            <div class="xpCard">
+              <h3>Creative Tools</h3>
+              <p>Substance Painter, Aseprite</p>
+              <p>Self-taught through active projects</p>
+            </div>
+
+            <div class="xpCard">
+              <h3>McDonald’s Crew Member</h3>
+              <p>2 years</p>
+              <p>Fast-paced teamwork and customer interaction</p>
+            </div>
+
+            <div class="xpCard">
+              <h3>Kitchen Porter</h3>
+              <p>2 months</p>
+              <p>Worked under pressure in a busy environment</p>
+            </div>
+
+            <div class="xpCard xpCard--empty">
+              <h3>Placement / Freelance</h3>
+              <p>Available to update</p>
+              <p>Reserved for future industry experience</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact">
+      <h2 class="sectionTitle sectionTitle--center">Contact</h2>
+
+      <div class="contactRow">
+
+        <div class="contactItem">
+          <div class="contactIcon">
+            <img src="assets/icons/email.svg" alt="" />
+          </div>
+          <h3>Email</h3>
+          <p>CharlieTDesign@outlook.com</p>
+        </div>
+
+        <a class="contactItem" href="https://www.linkedin.com/in/charlie-turnbull-996a253aa/" target="_blank" rel="noreferrer">
+          <div class="contactIcon">
+            <img src="assets/icons/linkedin.svg" alt="" />
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Charlie Turnbull</p>
+        </a>
+
+        <a class="contactItem" href="https://qlxiy.itch.io" target="_blank" rel="noreferrer">
+          <div class="contactIcon">
+            <img src="assets/icons/itch.svg" alt="" />
+          </div>
+          <h3>Itch.io</h3>
+          <p>https://qlxiy.itch.io/</p>
+        </a>
+
+        <a class="contactItem" href="https://x.com/CharlieTDesign" target="_blank" rel="noreferrer">
+          <div class="contactIcon">
+            <img src="assets/icons/x.svg" alt="" />
+          </div>
+          <h3>X / Twitter</h3>
+          <p>@CharlieTDesign</p>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
